@@ -1,0 +1,79 @@
+:root {
+  --bg: #0a0a0a;
+  --bg-card: #141414;
+  --bg-card-2: #1c1c1c;
+  --border: #2a2a2a;
+  --border-light: #222;
+  --text: #f0f0f0;
+  --text-2: #888;
+  --text-3: #555;
+  --accent: #7c6af7;
+  --accent-dim: rgba(124, 106, 247, 0.15);
+  --green: #22c55e;
+  --green-dim: rgba(34, 197, 94, 0.12);
+  --amber: rgba(251, 191, 36, 0.25);
+  --red: #ef4444;
+  --radius: 14px;
+  --radius-sm: 8px;
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+
+html, body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-geist), -apple-system, BlinkMacSystemFont, sans-serif;
+  min-height: 100dvh;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 0px; }
+
+/* Page shell */
+.page {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 0 1rem calc(2rem + var(--safe-bottom));
+  min-height: 100dvh;
+}
+
+/* Cards */
+.card {
+  background: var(--bg-card);
+  border: 0.5px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1rem 1.125rem;
+}
+
+/* Typography */
+.label {
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--text-3);
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+}
+
+/* Buttons */
+button { cursor: pointer; font-family: inherit; }
+
+/* O3 logo */
+.o3-logo {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: -1px;
+  color: var(--text);
+}
+.o3-logo span { color: var(--accent); }
+
+/* Confetti canvas */
+#confetti-canvas {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  pointer-events: none;
+  z-index: 999;
+}
