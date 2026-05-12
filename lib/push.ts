@@ -20,7 +20,7 @@ export async function registerPush(): Promise<PushSubscription | null> {
     const key = urlBase64ToUint8Array(VAPID_PUBLIC_KEY);
     return await reg.pushManager.subscribe({
       userVisibleOnly: true,
-      applicationServerKey: key.buffer.slice(key.byteOffset, key.byteOffset + key.byteLength),
+      applicationServerKey: key as unknown as ArrayBuffer,
     });
   } catch {
     return null;
