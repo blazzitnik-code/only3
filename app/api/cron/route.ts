@@ -31,7 +31,7 @@ export async function GET(req: NextRequest) {
     .eq("notification_time", hhmm)
     .not("push_subscription", "is", null);
 
-  if (!profiles?.length) return NextResponse.json({ sent: 0 });
+if (!profiles || profiles.length === 0) return NextResponse.json({ sent: 0 });
 
   const payload = JSON.stringify({
     title: "Only3 — time to plan your day",
