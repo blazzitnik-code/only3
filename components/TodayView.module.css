@@ -70,7 +70,7 @@
 
 /* ── Quote ── */
 .quoteCard { margin-bottom: 0.75rem; }
-.quoteText { font-size: 14px; color: var(--text-2); line-height: 1.65; font-style: italic; }
+.quoteText { font-size: 14px; color: var(--text-2); line-height: 1.7; font-style: italic; }
 .quoteAuthor { font-size: 12px; color: var(--text-3); margin-top: 6px; }
 
 /* ── Weekly theme ── */
@@ -106,11 +106,11 @@
   height: 2px;
   background: linear-gradient(90deg, var(--accent), transparent);
 }
-.restLogo { font-size: 36px; font-weight: 800; letter-spacing: -2px; margin-bottom: 0.75rem; }
+.restLogo { font-size: 36px; font-weight: 800; letter-spacing: -2px; margin-bottom: 0.75rem; color: var(--text); }
 .restLogo span { color: var(--accent); }
 .restTitle { font-size: 22px; font-weight: 700; color: var(--text); margin-bottom: 0.5rem; }
 .restMsg { font-size: 14px; color: var(--text-2); line-height: 1.6; margin-bottom: 1.5rem; }
-.countdown { display: flex; gap: 1rem; justify-content: center; margin-bottom: 0; }
+.countdown { display: flex; gap: 1rem; justify-content: center; }
 .countUnit { text-align: center; }
 .countNum {
   font-size: 32px; font-weight: 700; color: var(--accent);
@@ -124,14 +124,14 @@
 .tasksCard { margin-bottom: 0.75rem; }
 .taskRow {
   display: flex; align-items: center; gap: 12px;
-  padding: 10px 0;
+  padding: 11px 0;
   border-bottom: 0.5px solid var(--border-light);
 }
 .taskRow:last-of-type { border-bottom: none; padding-bottom: 0; }
 .taskRow:first-of-type { padding-top: 0; }
-.taskNum { font-size: 12px; color: var(--text-3); width: 16px; text-align: center; flex-shrink: 0; font-weight: 600; }
+.taskNum { font-size: 13px; color: var(--text-3); width: 16px; text-align: center; flex-shrink: 0; font-weight: 600; }
 .checkBtn {
-  width: 24px; height: 24px; border-radius: 50%;
+  width: 26px; height: 26px; border-radius: 50%;
   border: 1.5px solid var(--border);
   background: none; flex-shrink: 0;
   display: flex; align-items: center; justify-content: center;
@@ -141,8 +141,9 @@
 .checkDone { background: var(--accent-dim); border-color: var(--accent); color: var(--accent); }
 .taskInput {
   flex: 1; border: none; background: none;
-  font-size: 16px; color: var(--text);
+  font-size: 17px; color: var(--text);
   font-family: inherit; outline: none; min-width: 0;
+  line-height: 1.4;
 }
 .taskInput::placeholder { color: var(--text-3); }
 .taskDone { text-decoration: line-through; color: var(--text-3); }
@@ -155,35 +156,35 @@
 .moodCard { margin-bottom: 0.75rem; }
 .moodRow { display: flex; gap: 6px; }
 .moodBtn {
-  flex: 1; font-size: 20px;
+  flex: 1; font-size: 22px;
   background: var(--bg-card-2);
   border: 0.5px solid var(--border);
   border-radius: var(--radius-sm);
-  padding: 10px 0;
+  padding: 12px 0;
   transition: all 0.15s;
 }
 .moodBtn:hover { border-color: var(--text-3); }
 .moodSelected { border-color: var(--accent) !important; background: var(--accent-dim) !important; }
 
 /* ── Calendar ── */
-.calGrid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 4px; margin-bottom: 0; }
-.calLabel { font-size: 10px; color: var(--text-3); text-align: center; padding-bottom: 3px; font-weight: 600; }
+.calGrid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 5px; margin-bottom: 0; }
+.calLabel { font-size: 11px; color: var(--text-3); text-align: center; padding-bottom: 4px; font-weight: 600; }
 .calDay { aspect-ratio: 1; border-radius: 5px; }
-.calEmpty { background: var(--bg-card-2); opacity: 0.3; }
-.calPartial { background: rgba(124, 106, 247, 0.2); }
+.calEmpty { background: #2a2a2a; }
+.calPartial { background: rgba(139, 127, 245, 0.35); }
 .calFull { background: var(--accent); }
-.calToday { box-shadow: 0 0 0 1.5px var(--text-2); }
+.calToday { box-shadow: 0 0 0 2px var(--text); }
 
 /* ── Milestones ── */
 .milestones { display: flex; flex-direction: column; gap: 8px; }
 .milestone {
   display: flex; align-items: center; gap: 12px;
-  padding: 0.75rem 0.875rem;
+  padding: 0.875rem;
   border-radius: var(--radius-sm);
   border: 0.5px solid var(--border);
   background: var(--bg-card);
 }
-.milestoneUnlocked { background: var(--accent-dim); border-color: rgba(124,106,247,0.3); }
+.milestoneUnlocked { background: var(--accent-dim); border-color: rgba(139,127,245,0.4); }
 .mText { flex: 1; }
 .mName { font-size: 14px; font-weight: 600; color: var(--text); }
 .milestone:not(.milestoneUnlocked) .mName { color: var(--text-2); }
@@ -197,7 +198,7 @@
   bottom: 0; left: 0; right: 0;
   max-width: 480px;
   margin: 0 auto;
-  background: var(--bg-card);
+  background: #111111;
   border-top: 0.5px solid var(--border);
   display: flex;
   padding-bottom: env(safe-area-inset-bottom, 0px);
@@ -223,40 +224,40 @@
   padding-bottom: calc(5rem + env(safe-area-inset-bottom, 0px));
 }
 .insightSection { margin-bottom: 1.5rem; }
-.insightTitle { font-size: 20px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
+.insightTitle { font-size: 22px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
 .insightSub { font-size: 13px; color: var(--text-3); margin-bottom: 1rem; }
 
-.statsGrid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 1rem; }
+.statsGrid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 1.25rem; }
 .statCard {
   background: var(--bg-card); border: 0.5px solid var(--border);
   border-radius: var(--radius); padding: 1rem;
 }
-.statCardVal { font-size: 28px; font-weight: 700; color: var(--accent); margin-bottom: 2px; }
+.statCardVal { font-size: 28px; font-weight: 700; color: var(--accent); margin-bottom: 3px; }
 .statCardLbl { font-size: 12px; color: var(--text-3); }
 
-.streakBar30 { display: flex; gap: 3px; align-items: flex-end; height: 48px; margin-bottom: 0.5rem; }
-.streakBarItem { flex: 1; border-radius: 2px; min-height: 3px; transition: height 0.3s; }
+.streakBar30 { display: flex; gap: 3px; align-items: flex-end; height: 52px; margin-bottom: 0.5rem; }
+.streakBarItem { flex: 1; border-radius: 3px; min-height: 4px; transition: height 0.3s; }
 .streakBarFull { background: var(--accent); }
-.streakBarPartial { background: rgba(124,106,247,0.3); }
-.streakBarEmpty { background: var(--bg-card-2); }
+.streakBarPartial { background: rgba(139,127,245,0.35); }
+.streakBarEmpty { background: #2a2a2a; }
 
 .moodChart { display: flex; gap: 4px; align-items: flex-end; height: 60px; margin-bottom: 0.5rem; }
-.moodBar { flex: 1; border-radius: 3px; min-height: 4px; background: var(--accent); opacity: 0.7; }
+.moodBar { flex: 1; border-radius: 3px; min-height: 4px; background: var(--accent); }
 
 .patternList { display: flex; flex-direction: column; gap: 8px; }
 .patternItem {
   display: flex; align-items: center; gap: 10px;
-  padding: 0.75rem; border-radius: var(--radius-sm);
+  padding: 0.875rem; border-radius: var(--radius-sm);
   background: var(--bg-card); border: 0.5px solid var(--border);
 }
-.patternWord { flex: 1; font-size: 14px; color: var(--text); font-weight: 500; }
-.patternBar { height: 4px; border-radius: 2px; background: var(--accent); margin-top: 4px; }
-.patternCount { font-size: 12px; color: var(--text-3); flex-shrink: 0; }
+.patternWord { flex: 1; font-size: 15px; color: var(--text); font-weight: 500; }
+.patternBar { height: 3px; border-radius: 2px; background: var(--accent); margin-top: 5px; }
+.patternCount { font-size: 13px; color: var(--text-3); flex-shrink: 0; }
 
 .dayGrid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 6px; }
 .dayCell { text-align: center; }
-.dayCellLabel { font-size: 10px; color: var(--text-3); margin-bottom: 4px; font-weight: 600; }
-.dayCellVal { font-size: 16px; font-weight: 700; color: var(--accent); }
+.dayCellLabel { font-size: 11px; color: var(--text-3); margin-bottom: 5px; font-weight: 600; }
+.dayCellVal { font-size: 15px; font-weight: 700; }
 .dayCellSub { font-size: 10px; color: var(--text-3); }
 
-.emptyState { text-align: center; padding: 2rem; color: var(--text-3); font-size: 14px; }
+.emptyState { text-align: center; padding: 3rem 1rem; color: var(--text-3); font-size: 15px; line-height: 1.6; }
